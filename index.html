@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#667eea"/>
+  <title>My AI Assistant</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🤖 My AI Assistant</h1>
+      <p>Local AI + Cloud APIs for maximum power</p>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="chat">💬 Chat</button>
+      <button class="tab" data-tab="apis">🌐 APIs</button>
+      <button class="tab" data-tab="train">🧠 Train</button>
+    </nav>
+
+    <!-- Chat -->
+    <section id="chat" class="tab-content active">
+      <div class="chat-area" id="chatArea">
+        <div class="ai-message">🤖 Hi! I'm ready to chat. Try asking me something!</div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Ask me anything..." maxlength="500"/>
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <!-- Train -->
+    <section id="train" class="tab-content">
+      <h2>🧠 Train AI</h2>
+      <textarea id="trainingData" placeholder="Enter Q&A pairs or text to train..."></textarea>
+      <button id="trainBtn">🚀 Train</button>
+      <button id="resetBtn" class="secondary">🔄 Reset Memory</button>
+      <pre id="trainingLog">Ready to train...</pre>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
